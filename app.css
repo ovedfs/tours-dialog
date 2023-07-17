@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+  --main-color: #2c9bcc;
+  --main-font: 'Oswald';
+  --second-font: 'Open Sans';
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--main-color);
+  font-family: var(--main-font);
+  font-size: 16px;
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  font-size: 4rem;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.tours {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 2em;
+}
+
+.tour-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  text-align: left;
+  width: 100%;
+}
+
+.tour-card__img {
+  height: 250px;
+}
+
+.tour-card__title {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+.tour-card__title span:last-child {
+  color: var(--main-color);
+}
+
+.tour-card__info {
+  font-family: var(--second-font);
+}
+
+.tour-card__btn {
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 2rem;
+  width: 150px;
+  text-transform: uppercase;
+  font-family: var(--second-font);
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.tour-card__btn:hover {
+  background-color: #267395;
+}
+
+dialog {
+  width: 80%;
+  height: 700px;
+  margin: 10% auto;
+  padding: 2em;
+  border-radius: 1em;
+  border: none;
+  box-shadow: 3px 3px 5px #444;
+}
+
+dialog button {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  border: none;
+  background-color: inherit;
+  color: red;
+  cursor: pointer;
+}
+
+dialog::backdrop {
+  background-color: rgba(0,0,0,0.5);
+  backdrop-filter: blur(3px);
+}
+
+@media screen and (min-width: 768px) {
+  .tours {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .tour-card {
+    width: 45%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .tour-card {
+    width: 32%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .tour-card {
+    width: 23%;
+  }
+
+  .tour-card__title {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
